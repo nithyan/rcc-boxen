@@ -10,3 +10,7 @@
 /shared/*
 !/shared/README.md
 /vendor/gems/
+vendor/puppet/cache/*
+.idea
+.project
+*.tar.gz

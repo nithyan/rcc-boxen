@@ -5,3 +5,5 @@ rcc_repositories:
   - "retail-dashboard"
   - "retail-ui-spike"
   - "retail-dashboard-automation"
+rcc_services_directory: "retail-data"
+rcc_ui_directory: "retail-dashboard"

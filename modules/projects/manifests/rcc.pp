@@ -27,4 +27,5 @@ class projects::rcc{
     source  => 'sstephenson/rbenv-vars'
   }
 
+  include rcc_setup
 }

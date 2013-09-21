@@ -54,7 +54,6 @@ Homebrew::Formula <| |> -> Package <| |>
 node default {
   # core modules, needed for most things
   include dnsmasq
-  include git
   include hub
 
   # fail if FDE is not enabled
@@ -62,7 +61,7 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # common, useful packages
+# common, useful packages
   package {
     [
       'ack',
@@ -71,8 +70,10 @@ node default {
     ]:
   }
 
-  file { "${boxen::config::srcdir}/our-boxen":
-    ensure => link,
-    target => $boxen::config::repodir
-  }
+  include projects::rcc
+
+#  file { "${boxen::config::srcdir}/our-boxen":
+#    ensure => link,
+#    target => $boxen::config::repodir
+#  }
 }

@@ -1,0 +1,7 @@
+rcc_project_src_directory: "/Users/nithya/Data/project"
+rcc_git_url: "http://sifyscm02.thoughtworks.com"
+rcc_repositories:
+  - "retail-data"
+  - "retail-dashboard"
+  - "retail-ui-spike"
+  - "retail-dashboard-automation"

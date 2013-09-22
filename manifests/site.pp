@@ -12,6 +12,7 @@ Exec {
     "${boxen::config::home}/rbenv/bin",
     "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
     "${boxen::config::home}/homebrew/bin",
+    "${boxen::config::home}/nodenv/shims",
     '/usr/bin',
     '/bin',
     '/usr/sbin',
@@ -55,6 +56,7 @@ node default {
   # core modules, needed for most things
   include dnsmasq
   include hub
+  include git
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

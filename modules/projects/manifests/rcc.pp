@@ -1,6 +1,4 @@
 class projects::rcc{
-
-  include git
   include wget
   include postgresql
   include wget
@@ -13,7 +11,12 @@ class projects::rcc{
   }
   nodejs::module { 'jslint' : node_version => 'v0.10' }
   nodejs::module { 'csslint' : node_version => 'v0.10' }
-  #  nodejs::module { 'ember-tools' : node_version => 'v0.10' }
+  exec { "Installing ember-tools":
+    command => "npm install -g ember-tools",
+    logoutput => true,
+    require => Class['nodejs::global'],
+    user => "root"
+  }
 
 
   class { 'ruby::global':

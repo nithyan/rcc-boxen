@@ -57,6 +57,8 @@ node default {
   include dnsmasq
   include hub
   include git
+  include sysctl
+  include stdlib
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

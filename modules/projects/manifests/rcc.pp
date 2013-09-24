@@ -1,9 +1,12 @@
 class projects::rcc{
   include wget
-  include postgresql
   include wget
   include maven
   include tomcat
+  postgresql::user{"postgres superuser":
+    user => "postgres",
+    is_superuser => true
+  }
 
 
   class { 'nodejs::global':

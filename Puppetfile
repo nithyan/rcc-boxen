@@ -37,7 +37,7 @@ github "xquartz",    "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 github "sysctl", "1.0.0"
-github "postgresql", "2.0.1"
+#github "postgresql", "2.0.1" This has been added to the modules and customized to add user role
 github "wget", "1.0.0"
 github "maven", "1.0.1", :repo => "steinim/puppet-maven"
 github "tomcat", "1.0.0", :repo => "sanmiguelje/puppet-tomcat"

@@ -1,6 +1,5 @@
 class projects::rcc{
   include wget
-  include wget
   include maven
   include tomcat
   postgresql::user{"postgres superuser":
@@ -23,7 +22,8 @@ class projects::rcc{
 
 
   class { 'ruby::global':
-    version => '1.9.3'
+    version => '1.9.3',
+    require => Class['wget']
   }
   ruby::gem { "bundler for 1.9.3": gem     => 'bundler', ruby    => '1.9.3', version => '~> 1.2.0'}
   ruby::gem { "compass for 1.9.3": gem     => 'compass', ruby    => '1.9.3'}

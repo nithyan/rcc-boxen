@@ -38,6 +38,7 @@ github "xquartz",    "1.1.0"
 # https://github.com/boxen.
 github "sysctl", "1.0.0"
 #github "postgresql", "2.0.1" This has been added to the modules and customized to add user role
+github "java", "1.1.2"
 github "wget", "1.0.0"
 github "maven", "1.0.1", :repo => "steinim/puppet-maven"
 github "tomcat", "1.0.0", :repo => "sanmiguelje/puppet-tomcat"

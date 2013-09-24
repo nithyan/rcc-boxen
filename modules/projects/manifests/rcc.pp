@@ -1,5 +1,6 @@
 class projects::rcc{
   include wget
+  include java
   include maven
   include tomcat
   postgresql::user{"postgres superuser":

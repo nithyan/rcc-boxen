@@ -75,9 +75,4 @@ node default {
   }
 
   include projects::rcc
-
-#  file { "${boxen::config::srcdir}/our-boxen":
-#    ensure => link,
-#    target => $boxen::config::repodir
-#  }
 }

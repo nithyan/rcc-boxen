@@ -14,7 +14,7 @@ define postgresql::user($user, $is_superuser = true) {
 
   exec { "postgresql-user-${user}":
     command => "createuser ${user} ${super_user_option}",
-    require => Exec['wait-for-postgresql'],
-    unless => "psql -tAc \"SELECT 1 FROM pg_roles WHERE rolname='$user'\""
+    require => Exec['wait-for-postgresql']
+    unless => "psql postgres -tAc \"SELECT 1 FROM pg_roles WHERE rolname='$user'\""
   }
 }

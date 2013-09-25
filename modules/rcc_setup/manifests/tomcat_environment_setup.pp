@@ -1,6 +1,7 @@
 class rcc_setup::tomcat_environment_setup{
 
   include rcc_setup::params
+  $tomcat_home = $rcc_setup::params::tomcat_home
 
   file { "${boxen::config::home}/tomcat_env.sh":
     content => template('rcc_setup/tomcat_env.sh.erb'),
